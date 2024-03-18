@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        img.header-img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            height: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.gifer.com/74pZ.gif" alt="Header" class="header-img">
+    <div class="container">
+        <h1>Loan Approval Prediction Result</h1>
+        {% if prediction == 1 %}
+            <img src="https://i.gifer.com/MmHV.gif" alt="Loan Approved">
+            <p>The loan approval prediction result is: <strong>Loan Approved</strong></p>
+        {% else %}
+            <img src="https://i.gifer.com/7dR7.gif" alt="Loan Not Approved">
+            <p>The loan approval prediction result is: <strong>Loan Not Approved</strong></p>
+        {% endif %}
+        <p><a href="/">Go back to Home</a></p>
+    </div>
+</body>
+</html>

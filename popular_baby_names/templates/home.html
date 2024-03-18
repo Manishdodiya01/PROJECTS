@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Baby Names Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Popular Baby Names Prediction</h1>
+        <form action="/result" method="post">
+            <label for="year_of_birth">Year of Birth:</label>
+            <select id="year_of_birth" name="year_of_birth" required>
+                <option value="2011">2011</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2014">2014</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2019">2019</option>
+            </select>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="FEMALE">Female</option>
+                <option value="MALE">Male</option>
+            </select>
+            <label for="ethnicity">Ethnicity:</label>
+            <select id="ethnicity" name="ethnicity" required>
+                <option value="HISPANIC">HISPANIC</option>
+                <option value="WHITE NON HISPANIC">WHITE NON HISPANIC</option>
+                <option value="ASIAN AND PACIFIC ISLANDER">ASIAN AND PACIFIC ISLANDER</option>
+                <option value="BLACK NON HISPANIC">BLACK NON HISPANIC</option>
+                <option value="ASIAN AND PACI">ASIAN AND PACI</option>
+                <option value="BLACK NON HISP">BLACK NON HISP</option>
+                <option value="WHITE NON HISP">WHITE NON HISP</option>
+            </select>
+            <label for="child_first_name">Child First Name:</label>
+            <select id="child_first_name" name="child_first_name" required>
+                {% for name in child_names %}
+                    <option value="{{ name }}">{{ name }}</option>
+                {% endfor %}
+            </select>
+            <label for="count">Count:</label>
+            <select id="count" name="count" required>
+                {% for num in range(1, 293) %}
+                    <option value="{{ num }}">{{ num }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+#python==3.10   
+# i use google collab for train the model and google collab have python version 3.10 and tensorflow version 2.15.0
+numpy
+pandas
+scikit-learn==1.2.2
+joblib
+tensorflow==2.15.0
+keras
+flask

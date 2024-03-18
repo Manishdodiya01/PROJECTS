@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Word Prediction</title>
+  <style>
+    /* Using a CSS preprocessor (like Sass/Less) is recommended for easier styling management in larger projects */
+    body {
+      font-family: Arial, sans-serif; /* Consider using a professional font stack */
+      background-color: #000; /* Lighter background shade */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 600px; /* Set a maximum width for responsiveness */
+      margin: 50px auto; /* Center the container vertically */
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2em; /* Increase heading size slightly */
+    }
+
+    .form-container {
+      text-align: center;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 15px; /* Increase input padding for better readability */
+      margin-bottom: 15px; /* Increase spacing between elements */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .btn-submit {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 25px; /* Adjust padding for a balanced look */
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Next Word Prediction</h1>
+    <div class="form-container">
+      <form action="/predict" method="post">
+        <input type="text" name="text" class="form-input" placeholder="Enter text...">
+        <button type="submit" class="btn-submit">Predict</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

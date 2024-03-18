@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Loan Approval Prediction</h1>
+    <form action="/result" method="post">
+        <label for="age">Person Age:</label>
+        <input type="text" id="age" name="age"><br>
+
+        <label for="income">Person Income:</label>
+        <input type="text" id="income" name="income"><br>
+
+        <label for="home_ownership">Person Home Ownership:</label>
+        <select id="home_ownership" name="home_ownership">
+            <option value="RENT">Rent</option>
+            <option value="MORTGAGE">Mortgage</option>
+            <option value="OWN">Own</option>
+            <option value="OTHER">Other</option>
+        </select><br>
+
+        <label for="emp_length">Person Employment Length:</label>
+        <input type="text" id="emp_length" name="emp_length"><br>
+
+        <label for="loan_intent">Loan Intent:</label>
+        <select id="loan_intent" name="loan_intent">
+            <option value="PERSONAL">Personal</option>
+            <option value="EDUCATION">Education</option>
+            <option value="MEDICAL">Medical</option>
+            <option value="VENTURE">Venture</option>
+            <option value="HOMEIMPROVEMENT">Home Improvement</option>
+            <option value="DEBTCONSOLIDATION">Debt Consolidation</option>
+        </select><br>
+
+        <label for="loan_grade">Loan Grade:</label>
+        <select id="loan_grade" name="loan_grade">
+            <option value="D">D</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="A">A</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+        </select><br>
+
+        <label for="loan_amnt">Loan Amount:</label>
+        <input type="text" id="loan_amnt" name="loan_amnt"><br>
+
+        <label for="loan_int_rate">Loan Interest Rate:</label>
+        <input type="text" id="loan_int_rate" name="loan_int_rate"><br>
+
+        <label for="cb_person_default_on_file">CB Person Default on File:</label>
+        <select id="cb_person_default_on_file" name="cb_person_default_on_file">
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+        </select><br>
+
+        <label for="cb_person_cred_hist_length">CB Person Credit History Length:</label>
+        <input type="text" id="cb_person_cred_hist_length" name="cb_person_cred_hist_length"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

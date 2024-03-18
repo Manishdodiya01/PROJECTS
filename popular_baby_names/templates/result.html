@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        canvas {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        {% if prediction == 0 %}
+            <p>The predicted popularity level for the given baby name is: <strong>high_popular</strong></p>
+        {% elif prediction == 1 %}
+            <p>The predicted popularity level for the given baby name is: <strong>popular</strong></p>
+        {% elif prediction == 2 %}
+            <p>The predicted popularity level for the given baby name is: <strong>medium_popular</strong></p>
+        {% elif prediction == 3 %}
+            <p>The predicted popularity level for the given baby name is: <strong>less_popular</strong></p>
+        {% else %}
+            <p>Invalid prediction value</p>
+        {% endif %}
+        <a href="/" style="font-size: 18px;">Go Back</a>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var prediction = {{ prediction }};
+        var popularityLevel = '';
+
+        if (prediction == 0) {
+            popularityLevel = 'high_popular';
+        } else if (prediction == 1) {
+            popularityLevel = 'popular';
+        } else if (prediction == 2) {
+            popularityLevel = 'medium_popular';
+        } else if (prediction == 3) {
+            popularityLevel = 'less_popular';
+        } else {
+            popularityLevel = 'Invalid';
+        }
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Popularity Level'],
+                datasets: [{
+                    label: 'Popularity Level',
+                    data: [prediction + 1], // adding 1 to prediction to avoid 0 data value
+                    backgroundColor: getColor(popularityLevel),
+                    borderColor: getColor(popularityLevel),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // Function to get color based on popularity level
+        function getColor(level) {
+            switch (level) {
+                case 'high_popular':
+                    return 'rgba(255, 99, 132, 0.2)';
+                case 'popular':
+                    return 'rgba(54, 162, 235, 0.2)';
+                case 'medium_popular':
+                    return 'rgba(255, 206, 86, 0.2)';
+                case 'less_popular':
+                    return 'rgba(75, 192, 192, 0.2)';
+                default:
+                    return 'rgba(0, 0, 0, 0.2)';
+            }
+        }
+    </script>
+</body>
+</html>
