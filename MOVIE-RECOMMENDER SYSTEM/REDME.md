@@ -20,7 +20,7 @@ This project implements a movie recommendation system using collaborative filter
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/movie-recommendation-system.git
+    git clone 
     ```
 
 2. Install the required dependencies:
@@ -37,7 +37,7 @@ This project implements a movie recommendation system using collaborative filter
 
 ## Data Sources
 
-- **MovieLens Dataset:** The project uses the MovieLens dataset for movie information and ratings.
+- **TMDB 5000 Movie Dataset:** The project uses the TMDB 5000 Movie Dataset for movie information and ratings.
 
 ## File Structure
 
