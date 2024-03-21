@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <form action="/result" method="post">
+        <table>
+            <tr>
+                <th>Age:</th>
+                <th>Months as Customer:</th>
+                <th>Policy Number:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="age" name="age" required></td>
+                <td><input type="text" id="months_as_customer" name="months_as_customer" required></td>
+                <td><input type="text" id="policy_number" name="policy_number" required></td>
+            </tr>
+
+            <tr>
+                <th>Policy State:</th>
+                <th>Policy CSL:</th>
+                <th>Policy Deductable:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="policy_state" name="policy_state" required></td>
+                <td><input type="text" id="policy_csl" name="policy_csl" required></td>
+                <td><input type="text" id="policy_deductable" name="policy_deductable" required></td>
+            </tr>
+
+            <tr>
+                <th>Policy Annual Premium:</th>
+                <th>Umbrella Limit:</th>
+                <th>Insured Sex:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="policy_annual_premium" name="policy_annual_premium" required></td>
+                <td><input type="text" id="umbrella_limit" name="umbrella_limit" required></td>
+                <td><input type="text" id="insured_sex" name="insured_sex" required></td>
+            </tr>
+
+            <tr>
+                <th>insured_education_level:</th>
+                <th>insured_occupation:</th>
+                <th>insured_hobbies:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="insured_education_level" name="insured_education_level" required></td>
+                <td><input type="text" id="insured_occupation" name="insured_occupation" required></td>
+                <td><input type="text" id="insured_hobbies" name="insured_hobbies" required></td>
+            </tr>
+
+            <tr>
+                <th>insured_relationship:</th>
+                <th>capital-gains:</th>
+                <th>capital-loss:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="insured_relationship" name="insured_relationship" required></td>
+                <td><input type="text" id="capital-gains" name="capital-gains" required></td>
+                <td><input type="text" id="capital-loss" name="capital-loss" required></td>
+            </tr>
+
+            <tr>
+                <th>incident_type:</th>
+                <th>collision_type:</th>
+                <th>incident_severity:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="incident_type" name="incident_type" required></td>
+                <td><input type="text" id="collision_type" name="collision_type" required></td>
+                <td><input type="text" id="incident_severity" name="incident_severity" required></td>
+            </tr>
+
+            <tr>
+                <th>authorities_contacted:</th>
+                <th>incident_state:</th>
+                <th>incident_city:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="authorities_contacted" name="authorities_contacted" required></td>
+                <td><input type="text" id="incident_state" name="incident_state" required></td>
+                <td><input type="text" id="incident_city" name="incident_city" required></td>
+            </tr>
+            <tr>
+                <th>incident_hour_of_the_day:</th>
+                <th>number_of_vehicles_involved:</th>
+                <th>property_damage:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="incident_hour_of_the_day" name="incident_hour_of_the_day" required></td>
+                <td><input type="text" id="number_of_vehicles_involved" name="number_of_vehicles_involved" required></td>
+                <td><input type="text" id="property_damage" name="property_damage" required></td>
+            </tr>
+            <tr>
+                <th>bodily_injuries:</th>
+                <th>witnesses:</th>
+                <th>police_report_available:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="bodily_injuries" name="bodily_injuries" required></td>
+                <td><input type="text" id="witnesses" name="witnesses" required></td>
+                <td><input type="text" id="police_report_available" name="police_report_available" required></td>
+            </tr>
+            <tr>
+                <th>total_claim_amount:</th>
+                <th>injury_claim:</th>
+                <th>property_claim:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="total_claim_amount" name="total_claim_amount" required></td>
+                <td><input type="text" id="injury_claim" name="injury_claim" required></td>
+                <td><input type="text" id="property_claim" name="property_claim" required></td>
+            </tr>
+            <tr>
+                <th>vehicle_claim:</th>
+                <th>auto_make:</th>
+                <th>auto_year:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="vehicle_claim" name="vehicle_claim" required></td>
+                <td><input type="text" id="auto_make" name="auto_make" required></td>
+                <td><input type="text" id="auto_year" name="auto_year" required></td>
+            </tr>
+            <tr>
+                <th>policy_bind_year:</th>
+                <th>policy_bind_month:</th>
+                <th>policy_bind_day:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="policy_bind_year" name="policy_bind_year" required></td>
+                <td><input type="text" id="policy_bind_month" name="policy_bind_month" required></td>
+                <td><input type="text" id="policy_bind_day" name="policy_bind_day" required></td>
+            </tr>
+            <tr>
+                <th>incident_year:</th>
+                <th>incident_month:</th>
+                <th>incident_day:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="incident_year" name="incident_year" required></td>
+                <td><input type="text" id="incident_month" name="incident_month" required></td>
+                <td><input type="text" id="incident_day" name="incident_day" required></td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
