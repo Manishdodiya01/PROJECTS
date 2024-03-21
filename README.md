@@ -1,6 +1,6 @@
-# 100 Projects
+# 100 Projects Goal
 
-Welcome to my repository containing 100 projects! Here, you'll find a collection of various coding projects covering different topics, languages, and technologies.
+Welcome to my repository containing projects! Here, you'll find a collection of various coding projects covering different topics, languages, and technologies.
 
 ## Overview
 

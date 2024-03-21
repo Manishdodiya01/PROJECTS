@@ -2,7 +2,7 @@
 
 # Get similarity.pkl from notebook Movie_recommender_system.ipynb
 
-A simple movie recommendation system based on collaborative filtering using Streamlit, Python, and the MovieLens dataset.
+A simple movie recommendation system based on collaborative filtering using Streamlit, Python, and the TMDB 5000 Movie Dataset.
 
 ## Overview
 
@@ -20,7 +20,7 @@ This project implements a movie recommendation system using collaborative filter
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/movie-recommendation-system.git
+    git clone 
     ```
 
 2. Install the required dependencies:
@@ -37,7 +37,7 @@ This project implements a movie recommendation system using collaborative filter
 
 ## Data Sources
 
-- **MovieLens Dataset:** The project uses the MovieLens dataset for movie information and ratings.
+- **TMDB 5000 Movie Dataset:** The project uses the TMDB 5000 Movie Dataset for movie information and ratings.
 
 ## File Structure
 
@@ -57,8 +57,4 @@ This project implements a movie recommendation system using collaborative filter
 
 ## Contributors
 
-- Your Name
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Manish Dodiya
