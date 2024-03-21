@@ -2,7 +2,7 @@
 
 # Get similarity.pkl from notebook Movie_recommender_system.ipynb
 
-A simple movie recommendation system based on collaborative filtering using Streamlit, Python, and the MovieLens dataset.
+A simple movie recommendation system based on collaborative filtering using Streamlit, Python, and the TMDB 5000 Movie Dataset.
 
 ## Overview
 
