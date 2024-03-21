@@ -9,8 +9,8 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
 
-model = joblib.load('lr_model_without_hyper-tunning')
-tf_idf = joblib.load('tf_idf.joblib')
+model = joblib.load('artifacts/lr_model_without_hyper-tunning')
+tf_idf = joblib.load('artifacts/tf_idf.joblib')
 
 stop_words = set(stopwords.words('english'))
 steamer = PorterStemmer()
