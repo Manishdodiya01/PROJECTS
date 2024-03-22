@@ -1,0 +1,5 @@
+# 22-03-2024
+pandas
+sckit-learn
+tensorflow
+keras
