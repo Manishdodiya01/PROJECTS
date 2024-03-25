@@ -1,0 +1,6 @@
+google-api-python-client
+torch
+transformers
+streamlit
+dotenv
+os
